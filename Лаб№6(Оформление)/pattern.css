@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            #ffffff 0px,
+            #ffffff 20px,
+            transparent 20px,
+            transparent 40px
+        ),
+        url('bg.png');
+    background-repeat: repeat;
+    background-size: auto, auto;
+    background-color: #ffffff;
+}
