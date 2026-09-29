@@ -1,0 +1,442 @@
+/*№53*/
+
+ul i {
+	color: red;
+}
+p i {
+	color: green;
+}
+
+p b i {
+	color: red;
+}
+
+/*№54*/
+
+li > b {
+	color: red;
+}
+
+/*№55*/
+
+.odd {
+	color: red;
+}
+.eve {
+	color: green;
+}
+
+.eee {
+	color: red;
+}
+
+Потому что свойство color наследуется 
+
+/*№56*/
+
+.xxx {
+	font-size: 30px;
+}
+
+/*№57*/
+
+<div class="red">
+	<h2>Title</h2>
+	<p>text</p>
+	<p>text</p>
+</div>
+<div class="green">
+	<h2>Title</h2>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+</div>
+<div class="blue">
+	<h2>Title</h2>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+</div>
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+.blue {
+	color: blue;
+}
+
+<div class="red">
+	<h2>Title</h2>
+	<p>text</p>
+	<p>text</p>
+</div>
+<div class="green">
+	<h2>Title</h2>
+	<p>text</p>
+	<p>text</p>
+</div>
+<div class="red">      <!-- снова red -->
+	<h2>Title</h2>
+	<p>text</p>
+	<p>text</p>
+</div>
+<div class="green">    <!-- снова green -->
+	<h2>Title</h2>
+	<p>text</p>
+	<p>text</p>
+</div>
+.red {
+	color: red;
+}
+.green {
+	color: green;
+}
+
+/*№58*/
+
+.eee, .zzz {
+	line-height: 1.5;
+	font-family: Arial;
+}
+.eee {
+	font-size: 20px;
+}
+.zzz {
+	font-size: 30px;
+}
+
+.eee, .zzz, .ggg {
+	text-align: center;
+	font-family: Arial;
+}
+.eee {
+	font-size: 20px;
+}
+.zzz {
+	font-size: 30px;
+}
+.ggg {
+	font-size: 35px;
+}
+
+/*№59*/
+
+h2.header {
+	font-size: 40px;
+}
+h3.header {
+	font-size: 30px;
+}
+
+/*№60*/
+
+.eee i {
+	color: red;
+}
+
+/*№61*/
+Что выбирает: элементы с классом bbb, которые находятся внутри элементов с классом eee
+<div class="eee">
+	<p class="bbb">text</p>
+</div>
+
+Что выбирает: все теги <h2>, которые находятся внутри элементов с классом eee.
+<div class="eee">
+	<h2>Title</h2>
+</div>
+
+Что выбирает: <h2> с классом bbb, находящийся внутри .eee.
+<div class="eee">
+	<h2 class="bbb">Title</h2>
+</div>
+
+Что выбирает: <h3> с классом bbb внутри .eee.
+<div class="eee">
+	<h3 class="bbb">Title</h3>
+</div>
+
+Что выбирает: <p> с классом bbb внутри .eee.
+<div class="eee">
+	<p class="bbb">text</p>
+</div>
+
+Что выбирает: элементы с классом kkk, которые лежат внутри .bbb, который сам лежит внутри .eee.
+<div class="eee">
+	<div class="bbb">
+		<p class="kkk">text</p>
+	</div>
+</div>
+
+/*№62*/
+
+Что выбирает: теги <p>, у которых есть класс bbb. Без пробела — значит, тег и класс на одном элементе.
+<p class="bbb">text</p>
+
+Что выбирает: элементы с классом bbb, которые находятся внутри <p>. Пробел — значит, потомок.
+<p>
+	<span class="bbb">text</span>
+</p>
+
+Что выбирает: <p> с классом bbb, находящиеся внутри .eee.
+<div class="eee">
+	<p class="bbb">text</p>
+</div>
+
+Что выбирает: элементы с классом bbb, которые лежат внутри <p>, который сам лежит внутри .eee. 
+<div class="eee">
+	<p>
+		<span class="bbb">text</span>
+	</p>
+</div>
+
+/*№63*/
+
+<p class="success large">text 1</p>
+<p class="error small">text 2</p>
+<p class="error large">text 3</p>
+<p class="success small">text 4</p>
+
+.success { color: green; }
+.error   { color: red; }
+.large   { font-size: 30px; }
+.small   { font-size: 20px; }
+
+<p class="bold italic underline">Жирный, курсивный и подчёркнутый текст</p>
+.bold {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+.underline {
+	text-decoration: underline;
+}
+
+/*№64*/
+
+#elem1 {
+	color: red;
+}
+#elem2 {
+	color: green;
+}
+#elem3 {
+	color: blue;
+}
+
+/*№65*/
+
+#block {
+	background-color: #f0f0f0;   
+	border: 2px solid black;
+	padding: 10px;
+}
+.text {
+	font-size: 18px;
+	line-height: 1.5;
+	color: darkblue;
+}
+
+/*№66*/
+
+#elem h2 {
+	color: red;
+}
+
+#elem .text {
+	color: red;
+}
+
+#elem p.text {
+	color: red;
+}
+
+#elem li.text {
+	color: red;
+}
+
+/*№67*/
+
+.eee.zzz.ccc {
+	color: red;
+}
+
+/*№68*/
+
+Что выбирает: элемент, у которого одновременно есть классы bbb и zzz
+<p class="bbb zzz">text</p>
+
+Что выбирает: <h2>, у которого одновременно есть классы bbb и zzz.
+<h2 class="bbb zzz">Title</h2>
+
+Что выбирает: элемент с id="elem", у которого есть класс bbb.
+<div id="elem" class="bbb">text</div>
+
+Что выбирает: элемент с id="elem", у которого одновременно есть классы bbb и zzz.
+<div id="elem" class="bbb zzz">text</div>
+
+Что выбирает: <h2> с id="elem", у которого есть класс bbb.
+<h2 id="elem" class="bbb">Title</h2>
+
+
+/*№69*/
+
+Что выбирает: <h2> с классом zzz. Всё слитно → всё на одном элементе.
+<h2 class="zzz">Title</h2>
+
+Что выбирает: элемент с классом zzz внутри <h2>. Пробел → потомок.
+<h2>
+	<span class="zzz">text</span>
+</h2>
+
+Что выбирает: элемент с классами bbb и zzz одновременно.
+<p class="bbb zzz">text</p>
+
+Что выбирает: .zzz внутри .bbb.
+<div class="bbb">
+	<p class="zzz">text</p>
+</div>
+
+Что выбирает: элемент с тремя классами сразу: bbb, zzz, xxx.
+<p class="bbb zzz xxx">text</p>
+
+Что выбирает: элемент с классами zzz и xxx (одновременно на одном элементе), который находится внутри .bbb.
+<div class="bbb">
+	<p class="zzz xxx">text</p>
+</div>
+
+Что выбирает: .xxx внутри элемента, у которого одновременно классы bbb и zzz.
+<div class="bbb zzz">
+	<p class="xxx">text</p>
+</div>
+
+Что выбирает: .xxx внутри .zzz, который внутри .bbb
+<div class="bbb">
+	<div class="zzz">
+		<p class="xxx">text</p>
+	</div>
+</div>
+
+Что выбирает: элемент с id elem, у которого есть класс bbb.
+<div id="elem" class="bbb">text</div>
+
+Что выбирает: .bbb внутри #elem.
+<div id="elem">
+	<p class="bbb">text</p>
+</div>
+
+/*№70*/
+
+#block h1, #block h2 {
+	text-align: center;
+}
+#block h1, #block h2 {
+	text-align: center;
+}
+#block h1 {
+	font-size: 30px;
+}
+#block h2 {
+	font-size: 20px;
+}
+
+/*№71*/
+
+#block h1, #block h2, #block h3 {
+	text-align: center;
+}
+#block h2 {
+	color: blue;
+}
+#block h3 {
+	font-size: 16px;
+	color: red;
+}
+#block h1.eee, #block h2.zzz {
+	text-align: center;
+}
+#block h1.eee {
+	font-size: 30px;
+}
+#block h2.zzz {
+	font-size: 20px;
+}
+.xxx .kkk, .eee h2.zzz, #eee h2 {
+	text-align: center;
+}
+.eee h2.zzz, .xxx {
+	text-align: center;
+}
+
+/*№72*/
+
+div p {
+	color: red;
+}
+
+div h2 {
+	color: red;
+}
+
+#block p {
+	color: red;
+}
+
+#block h2 {
+	color: red;
+}
+
+.bbb {
+	color: red;
+}
+
+#block .bbb {
+	color: red;
+}
+
+p.bbb {
+	color: red;
+}
+
+h2.bbb {
+	color: red;
+}
+
+#block p.bbb {
+	color: red;
+}
+
+.bbb, .xxx {
+	color: red;
+}
+
+p.bbb, h2.xxx {
+	color: red;
+}
+
+#block p.bbb, #block p.xxx {
+	color: red;
+}
+
+.fff {
+	color: red;
+}
+
+.fff p {
+	color: red;
+}
+
+p.fff {
+	color: red;
+}
+
+.fff .bbb {
+	color: red;
+}
+
+.fff h2.bbb {
+	color: red;
+}

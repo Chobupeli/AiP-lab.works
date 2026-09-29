@@ -1,0 +1,202 @@
+/*№73*/
+
+Заголовки будут размером 30px.
+
+/*№74*/
+
+К заголовку <h2> применятся три свойства: font-size font-style color
+
+/*№77*/
+
+#elem + li {
+	color: red;
+}
+
+.elem + li {
+	color: red;
+}
+
+/*№78*/
+
+#elem ~ li {
+	color: red;
+}
+
+/*№79*/
+
+main * p {
+	color: red;
+}
+
+/*№80*/
+[title] {
+	color: red;
+}
+
+p[title] {
+	color: red;
+}
+
+p[title="hello"] {
+	color: red;
+}
+
+a[href^="http://"] {
+	color: red;
+}
+
+a[href$=".html"] {
+	color: red;
+}
+
+p[title*="hello"] {
+	color: red;
+}
+
+p[class^="top-"] {
+	color: red;
+}
+
+/*№82*/
+
+a:hover {
+	color: red;
+	text-decoration: none;
+}
+a:link {
+	color: blue;
+}
+a:visited {
+	color: green;
+}
+a:active {
+	color: black;
+}
+
+/*№84*/
+
+a {
+	color: skyblue;
+	text-decoration: none;
+}
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+/*№85*/
+
+#test a
+Выбирает: все ссылки <a>, находящиеся внутри элемента с id="test"
+
+#test a:hover
+Выбирает: те же ссылки внутри #test, но только в момент наведения на них курсора (:hover).
+
+<div id="test">
+	<p>
+		<a href="#">ссылка 1</a>
+	</p>
+	<p>
+		<a href="#">ссылка 2</a>
+	</p>
+</div>
+
+<p>
+	<a href="#">ссылка вне #test — НЕ покрасится</a>
+</p>
+
+/*№86*/
+
+Что выбирает
+a.zzz — все ссылки <a> с классом zzz.
+
+a.zzz:hover — те же ссылки при наведении.
+
+<a href="#" class="zzz">ссылка с классом zzz</a>
+<a href="#">обычная ссылка — НЕ подходит</a>
+
+Что выбирает
+#block a.zzz — ссылки <a> с классом zzz, находящиеся внутри элемента id="block".
+
+#block a.zzz:hover — те же ссылки при наведении.
+
+<div id="block">
+	<a href="#" class="zzz">ссылка внутри #block — покрасится</a>
+	<a href="#">без класса — НЕ покрасится</a>
+</div>
+
+<a href="#" class="zzz">вне #block — НЕ покрасится</a>
+
+Что выбирает
+.block a.zzz — ссылки <a> с классом zzz, находящиеся внутри элемента с классом block.
+
+.block a.zzz:hover — те же при наведении.
+
+<div class="block">
+	<a href="#" class="zzz">ссылка внутри .block — покрасится</a>
+</div>
+
+<div id="block">
+	<a href="#" class="zzz">это НЕ .block (id!) — НЕ покрасится</a>
+</div>
+
+<a href="#" class="zzz">вне .block — НЕ покрасится</a>
+
+
+/*№87*/
+
+
+
+/*№88*/
+
+
+
+/*№89*/
+
+
+
+/*№90*/
+
+
+
+/*№91*/
+
+/* 1. Первый <p> */
+.box p:first-of-type {
+	color: red;
+}
+
+/* 2. Последний <p> */
+.box p:last-of-type {
+	color: green;
+}
+
+/* 3. Второй <p> */
+.box p:nth-of-type(2) {
+	background-color: #ffeeba;
+}
+
+/* 4. Второй <p> с конца */
+.box p:nth-last-of-type(2) {
+	background-color: #b8daff;
+}
+
+/* 5. Единственный <span> такого типа */
+.box span:only-of-type {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*№92*/
+
+li:not(.elem) {
+	color: red;
+}
+
+li:not(:first-child) {
+	color: red;
+}
+
+li:not(:first-child):not(:last-child) {
+	color: red;
+}
