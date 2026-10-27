@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Стандартные методы: Math</title>
+</head>
+<body>
+<script>
+        var task291_result = Math.pow(2, 10);
+
+        console.log(task291_result); 
+</script>
+<script>
+    var task292_result = Math.sqrt(245);
+
+    console.log(task292_result); 
+</script>
+<script>
+    var task293_arr = [4, 2, 5, 19, 13, 0, 10];
+    var task293_sum = 0;
+
+    for (var task293_i = 0; task293_i < task293_arr.length; task293_i++) {
+        task293_sum += Math.pow(task293_arr[task293_i], 3);
+    }
+
+    var task293_result = Math.sqrt(task293_sum);
+
+    console.log('сумма кубов: ' + task293_sum);
+    console.log('корень из суммы: ' + task293_result);
+</script>
+<script>
+    var task294_sqrt = Math.sqrt(379);
+
+    var task294_round = Math.round(task294_sqrt);
+    var task294_tenth = task294_sqrt.toFixed(1);
+    var task294_hundredth = task294_sqrt.toFixed(2);
+
+    console.log('до целых: ' + task294_round);
+    console.log('до десятых: ' + task294_tenth);
+    console.log('до сотых: ' + task294_hundredth);
+</script>
+<script>
+    var task295_sqrt = Math.sqrt(587);
+
+    var task295_result = {
+        floor: Math.floor(task295_sqrt),
+        ceil: Math.ceil(task295_sqrt)
+    };
+
+    console.log(task295_result);
+</script>
+<script>
+    var task296_max = Math.max(4, -2, 5, 19, -130, 0, 10);
+    var task296_min = Math.min(4, -2, 5, 19, -130, 0, 10);
+
+    console.log('Максимальное число: ' + task296_max);
+    console.log('Минимальное число: ' + task296_min);
+</script>
+<script>
+    var task297_random = Math.floor(Math.random() * 100) + 1;
+
+    console.log(task297_random);
+</script>
+<script>
+    var task298_arr = [];
+
+    for (var task298_i = 0; task298_i < 10; task298_i++) {
+        var task298_num = Math.floor(Math.random() * 100) + 1;
+        task298_arr.push(task298_num);
+    }
+
+    console.log(task298_arr);
+</script>
+<script>
+    var task299_a = -5;
+    var task299_b = 12;
+
+    var task299_diff = Math.abs(task299_a - task299_b);
+
+    console.log(task299_diff); 
+</script>
+<script>
+    var task300_str = 'js';
+    var task300_result = task300_str.toUpperCase();
+
+    console.log(task300_result); 
+</script>
+<script>
+    var task301_str = 'JS';
+    var task301_result = task301_str.toLowerCase();
+
+    console.log(task301_result); 
+</script>
+<script>
+    var task302_str = 'i study javascript';
+
+    var task302_study_substr = task302_str.substr(2, 5);
+    var task302_js_substr = task302_str.substr(8, 10);
+
+    var task302_study_substring = task302_str.substring(2, 7);
+    var task302_js_substring = task302_str.substring(8, 18);
+
+    var task302_study_slice = task302_str.slice(2, 7);
+    var task302_js_slice = task302_str.slice(8, 18);
+
+    console.log(task302_study_substr, '|', task302_js_substr);
+    console.log(task302_study_substring, '|', task302_js_substring);
+    console.log(task302_study_slice, '|', task302_js_slice);
+</script>
+<script>
+    var task303_str = 'http://example.com';
+    var task303_result = task303_str.startsWith('http://');
+
+    console.log(task303_result);
+</script>
+<script>
+    var task304_str = 'index.html';
+    var task304_result = task304_str.endsWith('.html');
+
+    console.log(task304_result);
+</script>
+<script>
+    var task305_str = '1-2-3-4-5';
+    var task305_result = task305_str.replace(/-/g, '.');
+
+    console.log(task305_result);
+</script>
+<script>
+    var task306_str = '1-2-3-4-5';
+    var task306_arr = task306_str.split('-');
+
+    console.log(task306_arr);
+</script>
+<script>
+    var task307_str = '12345';
+    var task307_arr = task307_str.split('');
+
+    console.log(task307_arr);
+</script>
+<script>
+    var task308_arr = [1, 2, 3, 4, 5];
+    var task308_str = task308_arr.join('-');
+
+    console.log(task308_str);
+</script>
+<script>
+    var task309_arr = [1, 2, 3];
+    var task309_first = task309_arr.shift();
+
+    console.log(task309_first);
+</script>
+<script>
+    var task310_arr = [1, 2, 3];
+    var task310_last = task310_arr.pop();
+
+    console.log(task310_last);
+</script>
+<script>
+    var task311_arr = [1, 2, 3];
+    task311_arr.push(4, 5, 6);
+
+    console.log(task311_arr);
+</script>
+<script>
+    var task312_arr = [1, 2, 3];
+    task312_arr.unshift(4, 5, 6);
+
+    console.log(task312_arr);
+</script>
+<script>
+    var task313_arr = [1, 2, 3, 4, 5];
+    var task313_result = task313_arr.slice(0, 3);
+
+    console.log(task313_result);
+</script>
+<script>
+    var task314_arr = [1, 2, 3, 4, 5];
+    var task314_new_arr = task314_arr.slice(3);
+
+    console.log(task314_new_arr);
+</script>
+<script>
+    var task315_arr = [1, 2, 3, 4, 5];
+    task315_arr.splice(1, 2);
+
+    console.log(task315_arr);
+</script>
+<script>
+    var task316_arr = [1, 2, 3, 4, 5];
+    task316_arr.splice(3, 0, 'a', 'b', 'c');
+
+    console.log(task316_arr);
+</script>
+<script>
+    var task317_arr = [1, 2, 3, 4, 5];
+    
+    task317_arr.splice(1, 0, 'a', 'b');
+    task317_arr.splice(6, 0, 'c');
+    task317_arr.splice(8, 0, 'e');
+
+    console.log(task317_arr);
+</script>
+<script>
+    var task318_arr = [1, 2, 3, 4, 5];
+    var task318_hasThree = task318_arr.includes(3);
+
+    console.log(task318_hasThree);
+</script>
+<script>
+    var task319_obj = { a: 1, b: 2, c: 3 };
+    var task319_keys = Object.keys(task319_obj);
+
+    console.log(task319_keys);
+</script>
+<script>
+    var task320_num = 12345;
+    var task320_arr = String(task320_num).split('');
+
+    var task320_sum = 0;
+    for (var task320_digit of task320_arr) {
+        task320_sum += Number(task320_digit);
+    }
+
+    console.log(task320_sum);
+</script>
+<script>
+    var task321_num = 12345;
+    var task321_arr = String(task321_num).split('');
+
+    var task321_sum = 0;
+    for (var task321_digit of task321_arr) {
+        task321_sum += Number(task321_digit);
+    }
+
+    console.log(task321_sum);
+</script>
+<script>
+    var task322_num = 12345;
+    var task322_arr = String(task322_num).split('');
+
+    var task322_sum = 0;
+    for (var task322_digit of task322_arr) {
+        task322_sum += Number(task322_digit);
+    }
+
+    console.log(task322_sum);
+</script>
+<script>
+    var task323_num = 12345;
+    var task323_arr = String(task323_num).split('');
+
+    var task323_sum = 0;
+    for (var task323_digit of task323_arr) {
+        task323_sum += Number(task323_digit);
+    }
+
+    console.log(task323_sum);
+</script>
+<script>
+    var task324_num = 12345;
+    var task324_arr = String(task324_num).split('');
+
+    var task324_prod = 1;
+    for (var task324_digit of task324_arr) {
+        task324_prod *= Number(task324_digit);
+    }
+
+    console.log(task324_prod);
+</script>
+</body>
+</html>
