@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script> // 263 (1)
+        'use strict';
+        {
+        function test() {
+        	let num = 10;
+
+        	return function() {
+        		num--;
+        		console.log(num);
+        	};
+        }
+
+        let func = test();
+
+        func();
+        func();
+        func();
+        }
+    </script>
+
+    <script> // 263 (2)
+        'use strict';
+        {
+        function test() {
+        	let num = 10;
+
+        	return function() {
+        		if (num > 0) {
+        			num--;
+        			console.log(num);
+        		} else {
+        			console.log('Отсчет окончен');
+        		}
+        	};
+        }
+
+        let func = test();
+
+        for (let i = 0; i < 12; i++) {
+        	func();
+        }
+        }
+    </script>
+
+</body>
+</html>
