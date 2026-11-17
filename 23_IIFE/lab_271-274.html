@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script> // 271 (1)
+        'use strict';
+        {
+        (function() {
+        	return function() {
+        		return function() {
+        			alert('!');
+        		};
+        	};
+        })()()();
+        }
+    </script>
+
+    <script> // 271 (2)
+        'use strict';
+        {
+        (function(num1) {
+        	return function(num2) {
+        		console.log(num1 + num2);
+        	};
+        })(1)(2);
+        }
+    </script>
+
+    <script> // 271 (3)
+        'use strict';
+        {
+        (function(num1) {
+        	return function(num2) {
+        		return function(num3) {
+        			console.log(num1 + num2 + num3);
+        		};
+        	};
+        })(1)(2)(3);
+        }
+    </script>
+
+    <script> // 274 (1)
+        'use strict';
+        {
+        let func = (function() {
+        	let num = 1;
+
+        	return function() {
+        		console.log(num);
+        		num++;
+        	};
+        })();
+
+        func();
+        func();
+        func();
+        func();
+        func();
+        }
+    </script>
+
+    <script> // 274 (2)
+        'use strict';
+        {
+        let func = (function() {
+        	let num = 1;
+
+        	return function() {
+        		console.log(num);
+
+        		if (num < 5) {
+        			num++;
+        		} else {
+        			num = 1;
+        		}
+        	};
+        })();
+
+        for (let i = 0; i < 12; i++) {
+        	func();
+        }
+        }
+    </script>
+
+</body>
+</html>
